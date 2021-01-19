@@ -111,6 +111,10 @@ public class AddCustomerAndValidation {
 			System.out.println("01182021 git push test");
 		}
 		
+		public void testingSecondPush() {
+			
+			System.out.println("10 AM git push test");
+		}
 		
 		
 		
