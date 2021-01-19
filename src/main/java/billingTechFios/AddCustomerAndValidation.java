@@ -104,6 +104,16 @@ public class AddCustomerAndValidation {
 		driver.findElement(By.xpath("(//a[contains(text(),'Logout')])[2]")).click();
 		Thread.sleep(2000);
 		}
+		
+		
+		public void gitPushTest() {
+			
+			System.out.println("01182021 git push test");
+		}
+		
+		
+		
+		
 		@After
 		public void tearDown() {
 	 	driver.quit();
