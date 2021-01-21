@@ -105,6 +105,8 @@ if (browser == "chrome") {
 	actions.moveToElement(driver.findElement(By.xpath("//select[@id='cid']"))).build().perform();
 	driver.findElement(By.xpath("//option[contains(text(),'Techfios')]")).click();
 		
+	System.out.println(driver.getTitle());
+
 	}
 
 	private void Waittime(WebDriver driver, int timeInSec, By locator) {
