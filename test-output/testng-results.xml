@@ -2,40 +2,63 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27068" started-at="2021-01-17T20:54:24 CST" finished-at="2021-01-17T20:54:51 CST">
+  <suite name="Default suite" duration-ms="37933" started-at="2021-01-20T20:34:57 CST" finished-at="2021-01-20T20:35:35 CST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27068" started-at="2021-01-17T20:54:24 CST" finished-at="2021-01-17T20:54:51 CST">
+    <test name="Default test" duration-ms="37933" started-at="2021-01-20T20:34:57 CST" finished-at="2021-01-20T20:35:35 CST">
       <class name="billingTechFios.MissionTestNG">
-        <test-method status="PASS" signature="iniTial()[pri:0, instance:billingTechFios.MissionTestNG@51cdd8a]" name="iniTial" is-config="true" duration-ms="8538" started-at="2021-01-17T20:54:24 CST" finished-at="2021-01-17T20:54:32 CST">
+        <test-method status="PASS" signature="iniTial()[pri:0, instance:billingTechFios.MissionTestNG@51cdd8a]" name="iniTial" is-config="true" duration-ms="8408" started-at="2021-01-20T20:34:57 CST" finished-at="2021-01-20T20:35:05 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniTial -->
-        <test-method status="PASS" signature="loginTestA()[pri:0, instance:billingTechFios.MissionTestNG@51cdd8a]" name="loginTestA" duration-ms="5191" started-at="2021-01-17T20:54:32 CST" finished-at="2021-01-17T20:54:38 CST">
+        <test-method status="PASS" signature="loginTestA()[pri:0, instance:billingTechFios.MissionTestNG@51cdd8a]" name="loginTestA" duration-ms="5197" started-at="2021-01-20T20:35:05 CST" finished-at="2021-01-20T20:35:10 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTestA -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:billingTechFios.MissionTestNG@51cdd8a]" name="tearDown" is-config="true" duration-ms="1416" started-at="2021-01-17T20:54:38 CST" finished-at="2021-01-17T20:54:39 CST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:billingTechFios.MissionTestNG@51cdd8a]" name="tearDown" is-config="true" duration-ms="655" started-at="2021-01-20T20:35:10 CST" finished-at="2021-01-20T20:35:11 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="iniTial()[pri:0, instance:billingTechFios.MissionTestNG@51cdd8a]" name="iniTial" is-config="true" duration-ms="6680" started-at="2021-01-17T20:54:39 CST" finished-at="2021-01-17T20:54:46 CST">
+        <test-method status="PASS" signature="iniTial()[pri:0, instance:billingTechFios.MissionTestNG@51cdd8a]" name="iniTial" is-config="true" duration-ms="6736" started-at="2021-01-20T20:35:11 CST" finished-at="2021-01-20T20:35:18 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniTial -->
-        <test-method status="FAIL" signature="loginTestB()[pri:0, instance:billingTechFios.MissionTestNG@51cdd8a]" name="loginTestB" duration-ms="4228" started-at="2021-01-17T20:54:46 CST" finished-at="2021-01-17T20:54:50 CST">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="loginTestB()[pri:0, instance:billingTechFios.MissionTestNG@51cdd8a]" name="loginTestB" duration-ms="16276" started-at="2021-01-20T20:35:18 CST" finished-at="2021-01-20T20:35:34 CST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Wrong Answer expected [Dashboard1] but found [Dashboard]]]>
+              <![CDATA[chrome not reachable
+  (Session info: chrome=87.0.4280.141)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SHAMIM', ip: '192.168.213.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\msr49\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54184}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 33a87eea4630f70adf8510c317f2b205
+*** Element info: {Using=xpath, value=//span[contains(text(),'Dashboard')]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Wrong Answer expected [Dashboard1] but found [Dashboard]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at billingTechFios.MissionTestNG.loginTestB(MissionTestNG.java:93)
+              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=87.0.4280.141)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SHAMIM', ip: '192.168.213.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\msr49\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54184}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 33a87eea4630f70adf8510c317f2b205
+*** Element info: {Using=xpath, value=//span[contains(text(),'Dashboard')]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at billingTechFios.MissionTestNG.loginTestB(MissionTestNG.java:91)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -66,11 +89,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTestB -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:billingTechFios.MissionTestNG@51cdd8a]" name="tearDown" is-config="true" duration-ms="951" started-at="2021-01-17T20:54:50 CST" finished-at="2021-01-17T20:54:51 CST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:billingTechFios.MissionTestNG@51cdd8a]" name="tearDown" is-config="true" duration-ms="584" started-at="2021-01-20T20:35:34 CST" finished-at="2021-01-20T20:35:35 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

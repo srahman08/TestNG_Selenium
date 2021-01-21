@@ -58,7 +58,7 @@ if (browser == "chrome") {
 	driver.manage().window().maximize();
 	driver.manage().deleteAllCookies();
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	driver.get("https://www.techfios.com/billing/?ng=admin/");
+	//driver.get("https://www.techfios.com/billing/?ng=admin/");
 	}
 	@Test
 	public void loginTestA () throws InterruptedException	{
