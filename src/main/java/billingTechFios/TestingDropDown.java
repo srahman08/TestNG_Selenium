@@ -31,12 +31,16 @@ public class TestingDropDown {
 	USERNAME.sendKeys("demo@techfios.com");
 	PASSWORD.sendKeys("abc123");
 	SUBMIT.click();
-	Thread.sleep(2000);
-	driver.findElement(By.xpath("//span[contains(text(),'Customers')]")).click();
-	Thread.sleep(2000);
-	driver.findElement(By.xpath("//a[@href='https://techfios.com/billing/?ng=contacts/add/']")).click();;
-	Thread.sleep(2000);
+	Thread.sleep(3000);
 	
+	System.out.println(driver.getTitle());
+	System.out.println(driver.getWindowHandle());
+
+//	driver.findElement(By.xpath("//span[contains(text(),'Customers')]")).click();
+//	Thread.sleep(2000);
+//	driver.findElement(By.xpath("//a[@href='https://techfios.com/billing/?ng=contacts/add/']")).click();;
+//	Thread.sleep(2000);
+//	
 	 //Select sel = new Select(driver.findElement(By.xpath("//select[@id='cid']")));
 	 //sel.selectByVisibleText("Techfios");
 

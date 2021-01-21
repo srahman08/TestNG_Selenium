@@ -5,9 +5,8 @@
     <classes>
       <class name="billingTechFios.MissionTestNG">
         <methods>
-          <include name="loginTestB"/>
           <include name="iniTial"/>
-          <include name="tearDown"/>
+          <include name="loginTestA"/>
         </methods>
       </class> <!-- billingTechFios.MissionTestNG -->
     </classes>
