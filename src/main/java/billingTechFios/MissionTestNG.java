@@ -2,6 +2,7 @@ package billingTechFios;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.Properties;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -19,13 +20,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class MissionTestNG {
 	WebDriver driver;
-	String browser = "Edge";
-	
-	@BeforeClass
+	String browser = null;
+	String url = null;
+	@BeforeTest
 public void readConfig() {
 		Properties prop = new Properties();
 		//FileReader InputStream BuffeReader Scanner 
@@ -33,34 +35,32 @@ public void readConfig() {
 			InputStream input = new FileInputStream("src\\main\\java\\config\\config.properties");
 			prop.load(input);
 			browser = prop.getProperty("browser");
+			url = prop.getProperty("url");
+
 			System.out.println("User Browser: " + browser);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 }
-	
 	@BeforeMethod
-	public void iniTial () throws InterruptedException {
-
-if (browser == "chrome") {
+	public void iniTial () {
+		
+if (browser.equalsIgnoreCase( "chrome")){
 	System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
 	driver = new ChromeDriver();
 		
-	}else if(browser.equalsIgnoreCase("Firefox")){
+}else if(browser.equalsIgnoreCase("Firefox")){
 		System.setProperty("webdriver.gecko.driver", "driver\\geckodriver.exe");
 		driver = new FirefoxDriver();
-		
-	}else if(browser.equalsIgnoreCase("Edge")){
+}		
+	else if(browser.equalsIgnoreCase("Edge")){
 		System.setProperty("webdriver.edge.driver", "driver\\msedgedriver.exe");
 		driver = new EdgeDriver();
-		
 	}
-	
-//		driver = new ChromeDriver();
+		driver.get(url);
 	driver.manage().window().maximize();
 	driver.manage().deleteAllCookies();
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	driver.get("https://www.techfios.com/billing/?ng=admin/");
 	}
 	@Test
 	public void loginTestA () throws InterruptedException	{
@@ -89,7 +89,7 @@ if (browser == "chrome") {
 	WebElement ADDCUSTOMERTAB = driver.findElement(By.xpath("//a[@href='https://techfios.com/billing/?ng=contacts/add/']"));
 	
 	Random rnd = new Random();
-	int generateNumber = rnd.nextInt(999);
+	int generateNumber = rnd.nextInt(9999);
 	CUSTOMERTAB.click();
 	ADDCUSTOMERTAB.click();
 	Thread.sleep(1000);
@@ -98,7 +98,7 @@ if (browser == "chrome") {
 	By PHONENUMBER = By.xpath("//input[@id='phone']");
 	
 	driver.findElement(ACCOUNTNAME).sendKeys("SHAMIM"+ generateNumber);
-	driver.findElement(PHONENUMBER).sendKeys("347-592-5"+ generateNumber);
+	driver.findElement(PHONENUMBER).sendKeys("347-592-"+ generateNumber);
 	driver.findElement(EMAILADDRESS).sendKeys(generateNumber+"shamim@shamim.com");
 	Waittime(driver, 2, ACCOUNTNAME);
 	Actions actions = new Actions(driver);
@@ -115,10 +115,7 @@ if (browser == "chrome") {
 		wait.until(ExpectedConditions.visibilityOfElementLocated((locator)));
 		
 	}
-	
-	
-	
-	
+		
 	/*  @Test 
 	  public void loginTestB () throws InterruptedException	{
 			WebElement USERNAME = driver.findElement(By.xpath("//input[@id='username']"));

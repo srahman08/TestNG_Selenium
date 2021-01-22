@@ -5,6 +5,7 @@
     <classes>
       <class name="billingTechFios.MissionTestNG">
         <methods>
+          <include name="readConfig"/>
           <include name="iniTial"/>
           <include name="loginTestA"/>
         </methods>

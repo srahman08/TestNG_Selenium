@@ -19,13 +19,16 @@ WebDriver driver;
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		String windowHandle = driver.getWindowHandle();
-		driver.findElement(By.xpath("//input[@class='_yb_1t044']")).sendKeys("xpath");
-		driver.findElement(By.xpath("//input[@class='rapid-noclick-resp _yb_ljo01']")).click();
-		Thread.sleep(5000);
-		driver.findElement(By.xpath("//a[contains(text(),'XPath Tutorial - W3Schools')]")).click();
+		driver.findElement(By.xpath("//input[@id='ybar-sbq']")).sendKeys("xpath");
+		
+		driver.findElement(By.xpath("//input[@id='ybar-search']")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//a[@href='https://www.w3schools.com/xml/xpath_intro.asp']")).click();
+		
 		System.out.println(driver.getTitle());
 		Set<String> windowHandles = driver.getWindowHandles();
 		System.out.println(windowHandles);
+		
 		for(String i : windowHandles) {
 		System.out.println(i);
 		driver.switchTo().window(i);

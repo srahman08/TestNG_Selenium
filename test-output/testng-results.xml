@@ -2,16 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16832" started-at="2021-01-20T23:10:16 CST" finished-at="2021-01-20T23:10:33 CST">
+  <suite name="Default suite" duration-ms="19119" started-at="2021-01-21T21:04:09 CST" finished-at="2021-01-21T21:04:28 CST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16832" started-at="2021-01-20T23:10:16 CST" finished-at="2021-01-20T23:10:33 CST">
+    <test name="Default test" duration-ms="19119" started-at="2021-01-21T21:04:09 CST" finished-at="2021-01-21T21:04:28 CST">
       <class name="billingTechFios.MissionTestNG">
-        <test-method status="PASS" signature="iniTial()[pri:0, instance:billingTechFios.MissionTestNG@d44fc21]" name="iniTial" is-config="true" duration-ms="7735" started-at="2021-01-20T23:10:16 CST" finished-at="2021-01-20T23:10:23 CST">
+        <test-method status="PASS" signature="readConfig()[pri:0, instance:billingTechFios.MissionTestNG@26aa12dd]" name="readConfig" is-config="true" duration-ms="16" started-at="2021-01-21T21:04:09 CST" finished-at="2021-01-21T21:04:09 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readConfig -->
+        <test-method status="PASS" signature="iniTial()[pri:0, instance:billingTechFios.MissionTestNG@26aa12dd]" name="iniTial" is-config="true" duration-ms="8993" started-at="2021-01-21T21:04:09 CST" finished-at="2021-01-21T21:04:18 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniTial -->
-        <test-method status="PASS" signature="loginTestA()[pri:0, instance:billingTechFios.MissionTestNG@d44fc21]" name="loginTestA" duration-ms="9039" started-at="2021-01-20T23:10:23 CST" finished-at="2021-01-20T23:10:33 CST">
+        <test-method status="PASS" signature="loginTestA()[pri:0, instance:billingTechFios.MissionTestNG@26aa12dd]" name="loginTestA" duration-ms="10055" started-at="2021-01-21T21:04:18 CST" finished-at="2021-01-21T21:04:28 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTestA -->
